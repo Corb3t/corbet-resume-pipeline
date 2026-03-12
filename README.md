@@ -7,7 +7,7 @@ Instead of manually editing documents, my career history is stored as structured
 
 The CI/CD pipeline performs the following steps:
 1. Spins up an Ubuntu environment and installs the required Node.js dependencies.
-2. Parses the three targeted JSON files: `resume-tpm.json`, `resume-ux.json`, and `resume-bsa.json`.
+2. Parses the three targeted JSON files: `resume-pm.json`, `resume-ux.json`, and `resume-bsa.json`.
 3. Compiles the raw data into clean, ATS-optimized PDF files using the open source JSON Resume CLI.
 4. Authenticates and pushes the freshly built PDFs directly to a Cloudflare R2 storage bucket.
 
