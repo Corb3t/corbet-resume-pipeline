@@ -35,7 +35,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: auto
+          AWS_DEFAULT_REGION: us-east-1 # Explicit region prevents exit code 255
         run: |
           aws s3 cp ux-resume.pdf s3://resume-as-code/ux-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
           aws s3 cp pm-resume.pdf s3://resume-as-code/pm-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
