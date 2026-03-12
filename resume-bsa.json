@@ -1,0 +1,115 @@
+{
+  "basics": {
+    "name": "Corbet Griffith",
+    "label": "Business Systems Analyst",
+    "email": "me@corbet.app",
+    "phone": "(419) 324-5146",
+    "url": "https://corbet.app",
+    "summary": "Seasoned Business Systems Analyst with over 10 years of expertise working in highly regulated industries with brands like Ford, Reuters, VML, and Bronco in digital initiatives & data transformations, agile & waterfall project management, and user-focused solutions. Proven track record of successfully leading complex projects and effectively collaborating with cross-functional teams and partners internally, externally, remotely, and internationally. Skilled in leading complex integrations, optimizing IT processes, and leveraging data analytics to drive strategic decision-making."
+  },
+  "work": [
+    {
+      "name": "TerrAscend",
+      "position": "Business Analyst",
+      "startDate": "2024-11-01",
+      "endDate": "2025-08-01",
+      "highlights": [
+        "Managed the end-to-end API and data integration of enterprise platforms including Azure, Snowflake, Epicor, and Power BI.",
+        "Ensured seamless data connectivity and strict SOX/Legal compliance across all operational markets during technical deployments of key enterprise platforms including Azure, Snowflake, Epicor, and Wherefour.",
+        "Led requirements gathering with executive stakeholders to develop customized Power BI applications, dashboards, and reports, aligning analytics with critical business insights."
+      ]
+    },
+    {
+      "name": "Jackson Dawson",
+      "position": "Business Systems Analyst",
+      "startDate": "2023-10-01",
+      "endDate": "2024-10-01",
+      "highlights": [
+        "Oversaw the product integration of web technologies and APIs, including AWS, Google Analytics, Shopify, and Tableau, ensuring compliance with Ford's data privacy policies.",
+        "Worked with cross-functional teams and Ford leaders to gather technical and functional requirements, creating user stories and acceptance criteria in Azure DevOps.",
+        "Implemented a streamlined issue tracking process that reduced response turnaround time from one week to 24 hours.",
+        "Oversaw product integration of web technologies & APIs, including Google Analytics, AWS, Shopify, Mailchimp, Mandrill, FileMaker, Smartsheet, and Tableau while ensuring compliance with Ford data & SOX privacy policies."
+      ]
+    },
+    {
+      "name": "VML",
+      "position": "Business Systems Analyst",
+      "startDate": "2021-08-01",
+      "endDate": "2023-06-01",
+      "highlights": [
+        "Gathered technical requirements and prioritized user stories in Jira, enabling developers to efficiently iterate on complex enterprise programs for Ford.",
+        "Streamlined product announcement updates in Adobe Experience Cloud, reducing deployment time from 15 days down to within three days.",
+        "Managed targeted email campaigns and product deployments using Adobe Experience Manager and data analytics, resulting in a 10% uplift in associated revenue."
+      ]
+    },
+    {
+      "name": "Garden State Flower Cooperative",
+      "position": "Product Manager",
+      "startDate": "2020-12-01",
+      "endDate": "2022-05-01",
+      "highlights": [
+        "Gathered business requirements through interviews, participatory design sessions, and journey mapping to better understand problems associated with the co-op’s existing pre-order process and how it could be improved.",
+        "Wrote functional and technical requirements for a new pre-order process & app, helping address specific pain points and improve the experience for all stakeholders, including program administrators, farmers, and buyers.",
+        "Created and presented Standard Operating Procedures and training documentation for administrators, farmers, and buyers for the new CRM platform, cutting onboarding time for new administrators in half."
+      ]
+    },
+    {
+      "name": "Thomson Reuters",
+      "position": "Business Systems Analyst",
+      "startDate": "2014-08-01",
+      "endDate": "2018-10-01",
+      "highlights": [
+        "Wrote and executed SQL scripts to perform advanced data analysis, delivering data-driven insights that drove key business decisions & internal processes.",
+        "Led discovery sessions to develop technical requirements specifications and acceptance criteria for new software functionality for upcoming agile sprints."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Business Analysis",
+      "keywords": [
+        "Requirements Elicitation",
+        "Personas & Scenarios",
+        "SWOT & Gap Analysis",
+        "Journey & Process Mapping",
+        "Data Flow Diagrams",
+        "Data Analysis & Dashboards",
+        "SQL & Database Querying & Analysis"
+      ]
+    },
+    {
+      "name": "Technical Product Management",
+      "keywords": [
+        "Agile/Scrum Leadership",
+        "Technical Roadmap Planning",
+        "CI/CD Pipeline Understanding",
+        "Feature Prioritization",
+        "UAT & QA Automation Strategy",
+        "Release Planning & Deployments"
+      ]
+    },
+    {
+      "name": "Systems & Integration",
+      "keywords": [
+        "Azure DevOps",
+        "Jira",
+        "Git/GitHub",
+        "Cloudflare",
+        "Power BI",
+        "Visio",
+        "Figma (UI/UX)",
+        "Sharepoint",
+        "Excel",
+        "Azure",
+        "Snowflake",
+        "Adobe Analytics & Target (A4T)",
+        "Google Analytics & AWS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Michigan",
+      "location": "Ann Arbor, MI",
+      "studyType": "Master of Science in Information",
+      "area": "Focus on UI/UX Research & Design",

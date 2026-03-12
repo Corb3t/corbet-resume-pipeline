@@ -1,0 +1,107 @@
+{
+  "basics": {
+    "name": "Corbet Griffith",
+    "label": "UX Engineer",
+    "email": "me@corbet.app",
+    "phone": "(419) 324-5146",
+    "url": "https://corbet.app",
+    "summary": "UX professional bridging the gap between rigorous user research, visual design, and technical deployment. Over 10 years of experience building user-focused digital solutions for brands like Ford and VML. Passionate about translating human-centered research, journey mapping, and usability testing directly into functional, optimized web experiences and intuitive UI architectures."
+  },
+  "work": [
+    {
+      "name": "TerrAscend",
+      "position": "Business Analyst",
+      "location": "Remote",
+      "startDate": "2024-11-01",
+      "endDate": "2025-08-01",
+      "highlights": [
+        "Led comprehensive user journey mapping sessions to optimize IT support services, successfully reducing misrouted tickets by 80%.",
+        "Analyzed internal support requests to understand user pain points, leading to the implementation of a ZenDesk knowledge-base solution for employee self-servicing.",
+        "Developed step-by-step Standard Operating Procedures and digital signage to streamline user issue resolution and improve the overall employee experience."
+      ]
+    },
+    {
+      "name": "Jackson Dawson",
+      "position": "Business Systems Analyst",
+      "startDate": "2023-10-01",
+      "endDate": "2024-10-01",
+      "highlights": [
+        "Conducted A/B tests to understand which web content best drives user conversions, implementing a new registration flow that increased lead submissions by 15%.",
+        "Collaborated with cross-functional teams to map processes, create user stories, and define user acceptance testing criteria for agile sprint deployments."
+      ]
+    },
+    {
+      "name": "VML",
+      "position": "Business Systems Analyst",
+      "startDate": "2021-08-01",
+      "endDate": "2023-06-01",
+      "highlights": [
+        "Facilitated journey mapping sessions in Figma with strategists to understand user needs and partner pain points within the GuestXP Dealer Management System.",
+        "Partnered with subject matter experts to implement personalized digital experiences utilizing Adobe Experience Cloud and Analytics for Target."
+      ]
+    },
+    {
+      "name": "Garden State Flower Cooperative",
+      "position": "Product Manager",
+      "startDate": "2020-12-01",
+      "endDate": "2022-05-01",
+      "highlights": [
+        "Gathered requirements through participatory design sessions and journey mapping to identify user problems in the existing pre-order process.",
+        "Wrote functional requirements to build a new app and pre-order process, directly addressing user pain points for buyers, farmers, and administrators."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "UX Research & Design",
+      "keywords": [
+        "Personas & Scenarios",
+        "Journey & Process Mapping",
+        "A/B Testing",
+        "Participatory Design",
+        "Figma",
+        "Axure",
+        "Sketch",
+        "XD"
+      ]
+    },
+    {
+      "name": "Design Engineering",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "APIs",
+        "AWS",
+        "Adobe Experience Cloud"
+      ]
+    },
+    {
+      "name": "Product Execution",
+      "keywords": [
+        "User Acceptance Testing (UAT)",
+        "Quality Assurance (QA)",
+        "Epics",
+        "Features & User Stories"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Michigan",
+      "location": "Ann Arbor, MI",
+      "studyType": "Master of Science in Information",
+      "area": "Focus on #ux Research & Design",
+      "startDate": "2018-01-01",
+      "endDate": "2020-01-01",
+      "score": "3.9 GPA"
+    },
+    {
+      "institution": "University of Toledo",
+      "location": "Toledo, OH",
+      "studyType": "Bachelor of Business Administration",
+      "area": "Focus on Marketing",
+      "startDate": "2008-01-01",
+      "endDate": "2010-01-01"
+    }
+  ]
+}
