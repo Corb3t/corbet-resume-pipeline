@@ -2,39 +2,39 @@ name: Build and Deploy Resumes to Cloudflare R2
 
 on:
   push:
-	branches:
-	  - main
-	paths:
-	  - 'resume-*.json'
+    branches:
+      - main
+    paths:
+      - 'resume-*.json'
 
 jobs:
   build-and-deploy:
-	runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-	steps:
-	  - name: Checkout Repository
-		uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-	  - name: Setup Node.js
-		uses: actions/setup-node@v4
-		with:
-		  node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-	  - name: Install JSON Resume CLI and Theme
-		run: npm install -g resume-cli jsonresume-theme-elegant
+      - name: Install JSON Resume CLI and Theme
+        run: npm install -g resume-cli jsonresume-theme-elegant
 
-	  - name: Generate PDFs
-		run: |
-		  resume export ux-resume.pdf --resume resume-ux.json --theme elegant
-		  resume export pm-resume.pdf --resume resume-pm.json --theme elegant
-		  resume export bsa-resume.pdf --resume resume-bsa.json --theme elegant
+      - name: Generate PDFs
+        run: |
+          resume export ux-resume.pdf --resume resume-ux.json --theme elegant
+          resume export pm-resume.pdf --resume resume-pm.json --theme elegant
+          resume export bsa-resume.pdf --resume resume-bsa.json --theme elegant
 
-	  - name: Upload PDFs to Cloudflare R2
-		env:
-		  AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-		  AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-		  AWS_DEFAULT_REGION: auto
-		run: |
-		  aws s3 cp ux-resume.pdf s3://resume-as-code/ux-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
-		  aws s3 cp pm-resume.pdf s3://resume-as-code/pm-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
-		  aws s3 cp bsa-resume.pdf s3://resume-as-code/bsa-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      - name: Upload PDFs to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+        run: |
+          aws s3 cp ux-resume.pdf s3://resume-as-code/ux-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          aws s3 cp pm-resume.pdf s3://resume-as-code/pm-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          aws s3 cp bsa-resume.pdf s3://resume-as-code/bsa-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
