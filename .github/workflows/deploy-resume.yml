@@ -1,5 +1,4 @@
 name: Build and Deploy Resumes to Cloudflare R2
-name: Build & Deploy Resumes
 
 on:
   push:
