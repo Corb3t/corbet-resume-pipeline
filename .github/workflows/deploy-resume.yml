@@ -22,11 +22,11 @@ jobs:
           node-version: '20'
 
       - name: Install Chromium dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y chromium-browser
-      env:
-        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: false
+        run: |
+         sudo apt-get update
+         sudo apt-get install -y chromium-browser
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: false
 
       - name: Install JSON Resume CLI and Theme
         run: npm install resumed jsonresume-theme-elegant
