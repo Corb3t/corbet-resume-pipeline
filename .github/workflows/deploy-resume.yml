@@ -20,16 +20,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm' # Speeds up future runs
 
       - name: Install JSON Resume CLI and Theme
-        run: npm install jsonresume-theme-elegant
+        run: npm install resumed jsonresume-theme-elegant
 
       - name: Generate PDFs
         run: |
           # Using npx resumed is often more reliable in CI/CD
-          npr resumed ux-resume.pdf --resume resume-ux.json --theme elegant
-          npr resumed export pm-resume.pdf --resume resume-pm.json --theme elegant
-          npr resumed export bsa-resume.pdf --resume resume-bsa.json --theme elegant
+          npx resumed export ux-resume.pdf --resume resume-ux.json --theme elegant
+          npx resumed export pm-resume.pdf --resume resume-pm.json --theme elegant
+          npx resumed export bsa-resume.pdf --resume resume-bsa.json --theme elegant
 
       - name: Upload PDFs to Cloudflare R2
         env:
