@@ -5,7 +5,12 @@
     "email": "me@corbet.app",
     "phone": "(419) 324-5146",
     "url": "https://corbet.app",
-    "summary": "Seasoned technical leader with over 10 years of expertise driving digital initiatives, complex data transformations, and API integrations for enterprise brands like Ford, Reuters, and VML. Proven track record of managing end-to-end product lifecycles, optimizing IT processes, and aligning cross-functional global teams using agile methodologies. Skilled in leveraging SQL and data analytics to drive strategic product decisions while ensuring strict enterprise compliance."
+    "summary": "Seasoned technical leader with over 10 years of expertise driving digital initiatives, complex data transformations, and API integrations for enterprise brands like Ford, Reuters, and VML. Proven track record of managing end-to-end product lifecycles, optimizing IT processes, and aligning cross-functional global teams using agile methodologies. Skilled in leveraging SQL and data analytics to drive strategic product decisions while ensuring strict enterprise compliance.",
+    "location": {
+      "city": "Detroit",
+      "region": "MI",
+      "countryCode": "US"
+    }
   },
   "work": [
     {

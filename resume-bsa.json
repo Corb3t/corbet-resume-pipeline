@@ -5,7 +5,12 @@
     "email": "me@corbet.app",
     "phone": "(419) 324-5146",
     "url": "https://corbet.app",
-    "summary": "Seasoned Business Systems Analyst with over 10 years of expertise working in highly regulated industries with brands like Ford, Reuters, VML, and Bronco in digital initiatives & data transformations, agile & waterfall project management, and user-focused solutions. Proven track record of successfully leading complex projects and effectively collaborating with cross-functional teams and partners internally, externally, remotely, and internationally. Skilled in leading complex integrations, optimizing IT processes, and leveraging data analytics to drive strategic decision-making. "
+    "summary": "Seasoned Business Systems Analyst with over 10 years of expertise working in highly regulated industries with brands like Ford, Reuters, VML, and Bronco in digital initiatives & data transformations, agile & waterfall project management, and user-focused solutions. Proven track record of successfully leading complex projects and effectively collaborating with cross-functional teams and partners internally, externally, remotely, and internationally. Skilled in leading complex integrations, optimizing IT processes, and leveraging data analytics to drive strategic decision-making. ",
+    "location": {
+      "city": "Detroit",
+      "region": "MI",
+      "countryCode": "US"
+    }
   },
   "work": [
     {
