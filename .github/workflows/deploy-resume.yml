@@ -1,49 +1,47 @@
 name: Build and Deploy Resumes to Cloudflare R2
+name: Build & Deploy Resumes
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
-      - 'resume-*.json'
+      - 'resume-*.json'   # only trigger when a JSON file actually changes
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install Chromium dependencies
-        run: |
-         sudo apt-get update
-         sudo apt-get install -y chromium-browser
+      - name: Install Chromium
+        run: sudo apt-get install -y chromium-browser
+
+      - name: Install resume-cli and theme
+        run: npm install -g resume-cli jsonresume-theme-even
         env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: false
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
 
-      - name: Install JSON Resume CLI and Theme
-        run: npm install resumed jsonresume-theme-elegant
-
-      - name: Generate PDFs
+      - name: Export PDFs
         run: |
-          # Using npx resumed is often more reliable in CI/CD
-          npx resumed export resume-ux.json -o ux-resume.pdf --theme jsonresume-theme-elegant
-          npx resumed export resume-pm.json -o pm-resume.pdf --theme jsonresume-theme-elegant
-          npx resumed export resume-bsa.json -o bsa-resume.pdf --theme jsonresume-theme-elegant
-
-      - name: Upload PDFs to Cloudflare R2
+          resume export corbet-pm.pdf     --resume resume-pm.json  --theme even
+          resume export corbet-ux.pdf     --resume resume-ux.json  --theme even
+          resume export corbet-bsa.pdf    --resume resume-bsa.json --theme even
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+
+      - name: Upload to Cloudflare R2
+        run: |
+          aws s3 cp corbet-pm.pdf  s3://${{ secrets.R2_BUCKET_NAME }}/corbet-pm.pdf  --endpoint-url ${{ secrets.R2_ENDPOINT }}
+          aws s3 cp corbet-ux.pdf  s3://${{ secrets.R2_BUCKET_NAME }}/corbet-ux.pdf  --endpoint-url ${{ secrets.R2_ENDPOINT }}
+          aws s3 cp corbet-bsa.pdf s3://${{ secrets.R2_BUCKET_NAME }}/corbet-bsa.pdf --endpoint-url ${{ secrets.R2_ENDPOINT }}
+        env:
+          AWS_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: us-east-1 # Explicit region prevents exit code 255
-        run: |
-          aws s3 cp ux-resume.pdf s3://resume-as-code/ux-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
-          aws s3 cp pm-resume.pdf s3://resume-as-code/pm-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
-          aws s3 cp bsa-resume.pdf s3://resume-as-code/bsa-resume.pdf --endpoint-url https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          AWS_DEFAULT_REGION:    auto

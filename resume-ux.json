@@ -6,10 +6,10 @@
     "phone": "(419) 324-5146",
     "url": "https://corbet.app",
     "summary": "UX professional bridging the gap between rigorous user research, visual design, and technical deployment. Over 10 years of experience building user-focused digital solutions for brands like Ford and VML. Passionate about translating human-centered research, journey mapping, and usability testing directly into functional, optimized web experiences and intuitive UI architectures.",
-  "location": {
-    "city": "Detroit",
-    "region": "MI",
-    "countryCode": "US"
+    "location": {
+      "city": "Detroit",
+      "region": "MI",
+      "countryCode": "US"
     },
     "profiles": [
       {
@@ -107,7 +107,7 @@
       "institution": "University of Michigan",
       "location": "Ann Arbor, MI",
       "studyType": "Master of Science in Information",
-      "area": "Focus on #ux Research & Design",
+      "area": "Focus on UX Research & Design",
       "startDate": "2018-01-01",
       "endDate": "2020-01-01",
       "score": "3.9 GPA"
