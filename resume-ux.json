@@ -9,7 +9,19 @@
   "location": {
     "city": "Detroit",
     "region": "MI",
-    "countryCode": "US"
+    "countryCode": "US",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Corbet",
+        "url": "https://linkedin.com/in/corbet"
+      },
+      {
+        "network": "GitHub",
+        "username": "Corbet",
+        "url": "https://github.com/corbet"
+      }
+    ]
    }
   },
   "work": [
