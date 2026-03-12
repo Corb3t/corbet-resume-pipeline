@@ -27,9 +27,9 @@ jobs:
       - name: Generate PDFs
         run: |
           # Using npx resumed is often more reliable in CI/CD
-          npx resumed export resume-ux.json -o ux-resume.pdf --theme elegant
-          npx resumed export resume-pm.json -o pm-resume.pdf --theme elegant
-          npx resumed export resume-bsa.json -o bsa-resume.pdf --theme elegant
+          npx resumed export resume-ux.json -o ux-resume.pdf --theme jsonresume-theme-elegant
+          npx resumed export resume-pm.json -o pm-resume.pdf --theme jsonresume-theme-elegant
+          npx resumed export resume-bsa.json -o bsa-resume.pdf --theme jsonresume-theme-elegant
 
       - name: Upload PDFs to Cloudflare R2
         env:
