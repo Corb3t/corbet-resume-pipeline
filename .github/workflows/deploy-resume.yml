@@ -22,13 +22,14 @@ jobs:
           node-version: '20'
 
       - name: Install JSON Resume CLI and Theme
-        run: npm install -g resume-cli jsonresume-theme-elegant
+        run: npm install jsonresume-theme-elegant
 
       - name: Generate PDFs
         run: |
-          resume export ux-resume.pdf --resume resume-ux.json --theme elegant
-          resume export pm-resume.pdf --resume resume-pm.json --theme elegant
-          resume export bsa-resume.pdf --resume resume-bsa.json --theme elegant
+          # Using npx resumed is often more reliable in CI/CD
+          npr resumed ux-resume.pdf --resume resume-ux.json --theme elegant
+          npr resumed export pm-resume.pdf --resume resume-pm.json --theme elegant
+          npr resumed export bsa-resume.pdf --resume resume-bsa.json --theme elegant
 
       - name: Upload PDFs to Cloudflare R2
         env:
