@@ -10,6 +10,7 @@
     "city": "Detroit",
     "region": "MI",
     "countryCode": "US"
+    }
     "profiles": [
       {
         "network": "LinkedIn",
@@ -22,7 +23,6 @@
         "url": "https://github.com/corbet"
       }
     ]
-   }
   },
   "work": [
     {
