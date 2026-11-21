@@ -7,6 +7,10 @@ on:
     paths:
       - 'resume-*.json'   # only trigger when a JSON file actually changes
 
+concurrency:
+  group: deploy-resume-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
